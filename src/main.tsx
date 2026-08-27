@@ -4,7 +4,7 @@ import "./index.css";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen"; // さっき生成されたファイル
 
-const router = createRouter({ routeTree });
+const router = createRouter({ routeTree, basepath: import.meta.env.BASE_URL });
 
 // TypeScriptの型補完を効かせるための設定
 declare module "@tanstack/react-router" {
